@@ -3,11 +3,17 @@ import "fmt"
  
  func main() {
 	// Slice 
-	var score = []int{100, 200, 300, 400, 500}
-	fmt.Println(score)
-	score = append(score, 600, 700, 800)
-	fmt.Sprintln(score)
-	fmt.Println(score, len(score), cap(score))
+	
+	nomes := [4]string{"livia", "laura", "gabrieli", "kelly"}
+	
+	fmt.Println(nomes)
+	rangeOne := nomes[:2]
+	fmt.Println(rangeOne)
+	rangeTwo := nomes[2:]
+	fmt.Println(rangeTwo)
+	rangeThree := nomes[1:3]
+	fmt.Println(rangeThree)
+	
  }
     
 
