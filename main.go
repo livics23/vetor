@@ -1,21 +1,18 @@
 package main
-import "fmt"
- 
- func main() {
-	// Slice 
-	
-	nomes := [4]string{"livia", "laura", "gabrieli", "kelly"}
-	
-	fmt.Println(nomes)
-	rangeOne := nomes[:2]
-	fmt.Println(rangeOne)
-	rangeTwo := nomes[2:]
-	fmt.Println(rangeTwo)
-	rangeThree := nomes[1:3]
-	fmt.Println(rangeThree)
-	
- }
-    
 
- 	
- 	
+import "fmt"
+
+func main() {
+    var numeros [5]int
+    var soma int
+
+    fmt.Println("Digite 5 números:")
+
+    for i := 0; i < 5; i++ {
+        fmt.Scan(&numeros[i])
+        soma += numeros[i]
+    }
+
+    fmt.Println("Soma:", soma)
+}
+ 
