@@ -1,31 +1,37 @@
 package main
 
-import "fmt"
+import ("fmt")
 
-func main() {
-    age := 45
-	fmt.Println(age <= 50 )
-	fmt.Println(age >= 50)
-	fmt.Println(age == 50)
-	fmt.Println(age != 50)
+var opção int
+var saldo int
 
-	if age < 30 {
-		fmt.Println("menor que 30 anos")
-	} else if age < 40 {
-		fmt.Println("menor que 40 anos")
-	} else { 
-		fmt.Println("não é mesnor que 40 anos")
-	}
-	names := []string{"beatriz", "livia", "joana", "mel"}
-	for index, value := range names {
-		if index == 1 {
-			fmt.Println("continue apos posição", index, "e valor", value)
-			continue
-		}
-		if index > 2 { 
-			fmt.Println("sair apos" , index)
-		}
-		fmt.Println("valor: ", value)
-	}
-}
+
+ func deposito() { 
+	 var deposito int 
+	 fmt.Println("digite o valor do deposito")
+	 fmt.Scan(&deposito)
+	 saldo = saldo + deposito
+	fmt.Println("seu saldo atual é:", saldo)
+ }
+
+ func saque() {
+	var saque int
+	fmt.Println("digite o valor do saque")
+	fmt.Scan(&saque)
+	saldo = saldo - saque
+	fmt.Println("seu saldo atual é:", saldo)
+ }
  
+func main(){
+fmt.Println("digite seu saldo atual")
+fmt.Scan(&saldo)
+ fmt.Println("digite 1 para depositar e 2 para saque")
+ fmt.Scan(&opção)
+
+ if opção == 1 {
+	 deposito()
+ } else if opção == 2 {
+	saque()
+ } 
+ 
+}
